@@ -35,6 +35,7 @@ class SentimentProcessor(UDProcessor):
 
         elmo_path = config.get('elmo_path', None)
         if elmo_path is not None:
+            # TODO: remove this so we can remove the import of classifier.py
             elmo_model = classifier.load_elmo(elmo_path)
         else:
             elmo_model = None
